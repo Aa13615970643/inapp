@@ -1,4 +1,4 @@
-import { InventoryList } from './index';
+
 
 import Taro from '@tarojs/taro'
 const BASE_URL = 'https://www.123fe.net'
@@ -103,7 +103,7 @@ const baseOptions = (url: string, params: object = {}, method = 'get', config: c
 }
 
 
-const request = async (url: string, params: object = {}, method = 'get', config?) => {
+ export const request = async (url: string, params: object = {}, method = 'get', config?) => {
   params = convertParams(params)
   try {
     const res = await baseOptions(url, params, method, config)
@@ -166,12 +166,7 @@ const mockGetInventoryList2 = async (url, data: InventoryData & { page: number; 
   console.log('mockGetInventoryList2', url, data, x);
   // 总数据量
   const total = 100;
-  const parr = [
-    'https://img2.baidu.com/it/u=3018303209,1765139986&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=722',
-    'https://img0.baidu.com/it/u=4067836619,99985868&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=283',
-    'https://img2.baidu.com/it/u=3693067398,2696388876&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500',
-    ''
-  ];
+
   // 生成全部数据
   const allList: InventoryHisList[] = Array.from({ length: total }, (_, i) => {
     const num = Math.floor(Math.random() * 10) + 1;
