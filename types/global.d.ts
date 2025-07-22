@@ -3,12 +3,13 @@
  * @Autor: zhy
  * @Date: 2025-06-26 15:14:00
  * @LastEditors: zhy
- * @LastEditTime: 2025-06-26 21:28:29
+ * @LastEditTime: 2025-07-22 19:24:58
  */
 /// <reference types="@tarojs/taro" />
 /// <reference types="@taro-hooks/plugin-react" />
-import '@taro-hooks/plugin-react';
+ 
 
+//import '@taro-hooks/plugin-react';
 declare module '*.png';
 declare module '*.gif';
 declare module '*.jpg';
@@ -25,6 +26,5 @@ declare namespace NodeJS {
     TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd'
   }
 }
-
 
 
