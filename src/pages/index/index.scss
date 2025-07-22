@@ -1,0 +1,348 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px;
+  font-size: 28px;
+  background-color: white;
+
+  .no-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #bfbfbf;
+    font-size: 26px;
+
+    image {
+      margin: 120px 0 20px 0;
+      width: 300px;
+      height: 200px;
+      opacity: 0.7;
+      border-radius: 12px;
+    }
+  }
+
+  .loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    image {
+      width: 200px;
+      height: 200px;
+      opacity: 0.8;
+    }
+  }
+
+  .search-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 0 18px 0;
+    background-color: #f0f0f0;
+    height: 60px;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(18, 150, 219, 0.04);
+
+    .input {
+      font-size: 24px;
+      flex: 1;
+      height: 100%;
+      background: transparent;
+      color: #222;
+    }
+
+    .clear-btn-box {
+      width: 100px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .clear-btn {
+      font-size: 22px;
+      color: #fff;
+      background: #bbb;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      padding: 5px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 8px;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* 去掉 line-height 和 text-align，flex 已经居中 */
+      padding: 0;
+
+      &:active {
+        background: #999;
+      }
+    }
+
+    .search-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 26px;
+      background-color: #1296db;
+      margin: 0px;
+      /* 保持按钮样式不变 */
+    }
+  }
+
+  .main {
+    width: 100%;
+
+    .main-header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+
+
+
+      .main-btn {
+        color: white;
+        font-size: 26px;
+        background-color: #1296db;
+        margin: 0px;
+        /* 保持按钮样式不变 */
+      }
+    }
+
+    .main-content {
+      width: 100%;
+      padding-bottom: 50px;
+
+      .card-view {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+
+        .card-item {
+          flex: 0 0 calc(50% - 10px);
+          box-sizing: border-box;
+
+          background-color: #fff;
+          border-radius: 14px;
+          /* 更明显的阴影 */
+          box-shadow: 0 4px 16px rgba(18, 150, 219, 0.12), 0 1.5px 6px rgba(0, 0, 0, 0.06);
+          /* 或加淡灰色边框（可二选一，也可都加） */
+          border: 1px solid #f0f0f0;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+
+
+
+          .card-info {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            justify-content: space-between;
+            margin-bottom: 10px;
+          }
+
+          .card-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover; // 兼容web端
+            background: #f6f6f6;
+            border-radius: 10px;
+            margin-bottom: 10px;
+          }
+
+          .card-title {
+            font-size: 26px;
+            color: #1296db;
+            font-weight: 500;
+            margin-bottom: 4px;
+          }
+
+          Text {
+            margin: 4px 0px;
+            color: #444;
+            font-size: 24px;
+          }
+
+          .card-btn {
+            color: white;
+            background-color: #1296db;
+            margin-right: 0;
+            font-size: 26px;
+            width: 150px;
+            /* 保持按钮样式不变 */
+          }
+        }
+      }
+    }
+  }
+
+  .table-view {
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 4px 16px rgba(18, 150, 219, 0.08);
+
+    .table-header,
+    .table-row {
+      display: flex;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .table-header {
+      background: #f7f7f7;
+      font-weight: bold;
+      color: #1296db;
+      font-size: 28px;
+    }
+
+    .th,
+    .td {
+      flex: 1;
+      text-align: center;
+      font-size: 25px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      min-width: 0;
+      box-sizing: border-box;
+      color: #444;
+    }
+  }
+
+  /* 按钮样式保持原样 */
+  .td-btn {
+    flex: 1;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #1296db;
+    color: white;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .disabled-btn {
+    flex: 1;
+    width: 100px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .modal-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background: #fff;
+    border-radius: 16px;
+    width: 70%;
+    padding: 40px 28px 28px 28px;
+    min-width: 260px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .modal-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 28px;
+    display: block;
+    text-align: center;
+  }
+
+  .modal-row {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .modal-input {
+    flex: 1;
+    margin-left: 16px;
+    padding: 12px 16px;
+    font-size: 24px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f7f8fa;
+  }
+
+  .modal-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
+    margin-top: 20px;
+  }
+
+  .modal-btns .taro-btn {
+    font-size: 22px;
+    padding: 0 32px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #1296db;
+    color: white;
+
+  }
+
+  .modal-btns .cancel-btn {
+    font-size: 22px;
+    padding: 0 32px;
+    height: 48px;
+    background-color: #ccc;
+    color: #fff;
+  }
+
+  .card-img-wrapper {
+    width: 100%;
+    height: 200px; // 固定高度
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f6f6;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+}

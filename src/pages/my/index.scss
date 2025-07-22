@@ -1,0 +1,273 @@
+.my-wrapper {
+  background: white;
+  position: relative;
+  padding-bottom: 40px;
+
+  .user-card-gradient {
+
+    margin: 0 24px;
+    margin-top: 0;
+    height: 148px; // 增大高度，避免内容被裁切
+    display: flex;
+    margin-top: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(18, 150, 219, 0.13);
+    overflow: visible;
+
+    .user-card-inner {
+      display: flex;
+      align-items: center;
+      padding: 24px 20px; // 增大内边距
+      width: 100%;
+      background: transparent;
+
+      .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin-right: 16px;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 8px rgba(18, 150, 219, 0.18);
+        flex-shrink: 0;
+        background: #a9a6a6;
+      }
+
+      .user-meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .user-name {
+          font-size: 28px;
+          font-weight: bold;
+          color: black;
+          margin-bottom: 6px;
+        }
+
+        .user-phone,
+        .user-dept {
+          color: black;
+          font-size: 22px;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
+  .history-section {
+    margin: 54px 24px 0 24px;
+
+    .history-title {
+      font-size: 26px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .history-list {
+      .history-item {
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(18, 150, 219, 0.13);
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 18px 18px 16px 18px;
+        margin-bottom: 18px;
+        position: relative;
+
+
+        .item-left {
+          flex: 1;
+          display: flex;
+          align-items: flex-start;
+
+          >View {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+
+          .item-date {
+            font-size: 24px;
+            color: #aaa;
+            margin-bottom: 2px;
+            display: block;
+          }
+
+          .item-desc {
+            font-size: 24px;
+            color: #555;
+            margin-bottom: 2px;
+            line-height: 1.6;
+            word-break: break-all;
+          }
+
+          .item-name {
+            font-size: 24px;
+            color: #1296db;
+            font-weight: 500;
+            margin-bottom: 2px;
+          }
+        }
+
+        .item-status {
+          font-size: 24px;
+          font-weight: bold;
+          margin-left: 18px;
+          margin-top: 2px;
+          padding: 4px 16px;
+          border-radius: 14px;
+          min-width: 70px;
+          text-align: center;
+          border: 1.5px solid transparent;
+
+          &.status-done {
+            background: #e8f8ef;
+            color: #52c41a;
+            border-color: #52c41a;
+          }
+
+          &.status-using {
+            background: #fffbe6;
+            color: #faad14;
+            border-color: #faad14;
+          }
+
+          &.status-reject {
+            background: #fff0f0;
+            color: #e74c3c;
+            border-color: #e74c3c;
+          }
+        }
+
+        .dep-btn {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+          background-color: #1296db;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+
+  .modal-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-content {
+    background: #fff;
+    border-radius: 16px;
+    width: 70%;
+    padding: 40px 28px 28px 28px;
+    min-width: 260px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .modal-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 28px;
+    display: block;
+    text-align: center;
+  }
+
+  .modal-row {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .modal-input {
+    flex: 1;
+    margin-left: 16px;
+    padding: 12px 16px;
+    font-size: 24px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #f7f8fa;
+  }
+
+  .modal-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
+    margin-top: 20px;
+  }
+
+  .modal-btns .taro-btn {
+    font-size: 22px;
+    padding: 0 32px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #1296db;
+    color: white;
+
+  }
+
+  .modal-btns .cancel-btn {
+    font-size: 22px;
+    padding: 0 32px;
+    height: 48px;
+    background-color: #ccc;
+    color: #fff;
+  }
+
+
+  .card-img-wrapper {
+    width: 100%;
+    height: 200px; // 固定高度
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f6f6;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+}
+
+.no-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #bfbfbf;
+  font-size: 26px;
+
+  image {
+    margin: 120px 0 20px 0;
+    width: 300px;
+    height: 200px;
+    opacity: 0.7;
+    border-radius: 12px;
+  }
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  image {
+    width: 200px;
+    height: 200px;
+    opacity: 0.8;
+  }
+}
