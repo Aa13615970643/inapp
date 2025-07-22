@@ -3,7 +3,7 @@
  * @Autor: zhy
  * @Date: 2025-06-26 15:35:40
  * @LastEditors: zhy
- * @LastEditTime: 2025-07-22 16:57:24
+ * @LastEditTime: 2025-07-22 18:38:36
  */
 import { View, Text, Image, Button, Input } from "@tarojs/components";
 import { useState } from "react";
@@ -66,7 +66,7 @@ const My = () => {
     dept: "*****"
   };
 
-  const [historyList, setHistoryList] = useState<any[]>([]);
+  const [historyList, setHistoryList] = useState<InventoryHisList[]>([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
